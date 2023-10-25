@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Questionnaire {
-    ArrayList<Boolean> answersList = new ArrayList<>();
-    List<String> questions = readQuestionsFromFile("Materials/testFile.txt");
+    private ArrayList<Boolean> answersList = new ArrayList<>();
+    private List<String> questions = readQuestionsFromFile("Materials/testFile.txt");
     public static List<String> readQuestionsFromFile(String fileName) {
         List<String> questions = new ArrayList<>();
 
@@ -29,6 +29,22 @@ public class Questionnaire {
 
         return questions;
 
+    }
+
+    public ArrayList<Boolean> getAnswersList() {
+        return answersList;
+    }
+
+    public void setAnswersList(ArrayList<Boolean> answersList) {
+        this.answersList = answersList;
+    }
+
+    public List<String> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(List<String> questions) {
+        this.questions = questions;
     }
 }
 
